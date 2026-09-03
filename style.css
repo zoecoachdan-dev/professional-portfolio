@@ -1,0 +1,508 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0c0f;
+    color: #f2f2f2;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    color: #a8adb5;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+header {
+    width: 100%;
+    border-bottom: 1px solid #20242a;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 28px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #9da3ac;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 150px 32px 140px;
+}
+
+.eyebrow,
+.section-label {
+    color: #777e88;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 900px;
+    margin-top: 24px;
+    font-size: clamp(52px, 8vw, 100px);
+    font-weight: 600;
+}
+
+.hero-text {
+    max-width: 700px;
+    margin-top: 35px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.hero-buttons,
+.contact-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 40px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 24px;
+    border: 1px solid #343941;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.button.primary {
+    background: #f2f2f2;
+    color: #0a0c0f;
+    border-color: #f2f2f2;
+}
+
+.button.primary:hover {
+    background: #ffffff;
+}
+
+.button.secondary {
+    color: #f2f2f2;
+}
+
+.button.secondary:hover {
+    background: #171a1f;
+}
+
+
+/* ================================
+   INTRO
+================================ */
+
+.intro-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 32px;
+    border-top: 1px solid #20242a;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 60px;
+}
+
+.intro-number {
+    color: #555b64;
+    font-size: 14px;
+}
+
+.intro-content {
+    max-width: 850px;
+}
+
+.intro-content h2 {
+    margin: 20px 0 35px;
+    font-size: clamp(32px, 5vw, 58px);
+}
+
+.intro-content p {
+    max-width: 750px;
+    margin-bottom: 22px;
+    font-size: 17px;
+}
+
+
+/* ================================
+   GENERAL SECTIONS
+================================ */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px 32px;
+    border-top: 1px solid #20242a;
+}
+
+.section h2 {
+    max-width: 850px;
+    margin-top: 22px;
+    font-size: clamp(36px, 5vw, 64px);
+}
+
+.section-lead {
+    max-width: 720px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+
+/* ================================
+   FEATURED SECTIONS
+================================ */
+
+.featured {
+    background: #0d1014;
+    max-width: none;
+    padding-left: max(32px, calc((100% - 1136px) / 2));
+    padding-right: max(32px, calc((100% - 1136px) / 2));
+}
+
+
+/* ================================
+   WRITING CARDS
+================================ */
+
+.cards {
+    margin-top: 65px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 32px;
+    min-height: 300px;
+    border: 1px solid #252a31;
+    background: #101318;
+}
+
+.card-number {
+    color: #626973;
+    font-size: 13px;
+}
+
+.card h3 {
+    margin-top: 70px;
+    font-size: 25px;
+}
+
+.card p {
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.about-grid p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ================================
+   EXPERTISE
+================================ */
+
+.expertise-grid {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.expertise-item {
+    padding: 35px 30px 40px 0;
+    border-top: 1px solid #252a31;
+}
+
+.expertise-item span {
+    color: #606772;
+    font-size: 12px;
+}
+
+.expertise-item h3 {
+    margin-top: 18px;
+    font-size: 25px;
+}
+
+.expertise-item p {
+    max-width: 500px;
+    margin-top: 14px;
+}
+
+
+/* ================================
+   CURRENT DIRECTION
+================================ */
+
+.focus-list {
+    margin-top: 60px;
+    border-top: 1px solid #252a31;
+}
+
+.focus-list div {
+    padding: 25px 0;
+    border-bottom: 1px solid #252a31;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.focus-list strong {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.focus-list span {
+    color: #777e88;
+}
+
+
+/* ================================
+   PROJECTS
+================================ */
+
+.project-list {
+    margin-top: 65px;
+    border-top: 1px solid #252a31;
+}
+
+.project {
+    padding: 35px 0;
+    border-bottom: 1px solid #252a31;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.project-info > span {
+    color: #626973;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+}
+
+.project h3 {
+    margin-top: 12px;
+    font-size: 28px;
+}
+
+.project p {
+    max-width: 650px;
+    margin-top: 10px;
+}
+
+.project-status {
+    color: #8e949d;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact {
+    max-width: 1200px;
+    margin: auto;
+    padding: 140px 32px;
+    text-align: center;
+    border-top: 1px solid #20242a;
+}
+
+.contact h2 {
+    margin-top: 20px;
+    font-size: clamp(42px, 6vw, 75px);
+}
+
+.contact p {
+    max-width: 600px;
+    margin: 25px auto 0;
+    font-size: 18px;
+}
+
+.contact-buttons {
+    justify-content: center;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 32px 45px;
+    border-top: 1px solid #20242a;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #626973;
+    font-size: 12px;
+}
+
+footer strong {
+    color: #f2f2f2;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 22px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 100px 20px 90px;
+    }
+
+    .hero h1 {
+        font-size: clamp(45px, 13vw, 70px);
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .intro-section {
+        padding: 80px 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .section {
+        padding: 90px 20px;
+    }
+
+    .featured {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: auto;
+    }
+
+    .card h3 {
+        margin-top: 45px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .focus-list div {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact {
+        padding: 100px 20px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        padding: 30px 20px;
+        flex-direction: column;
+    }
+}
